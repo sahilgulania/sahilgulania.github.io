@@ -118,7 +118,7 @@ date: 2020-07-26
 }
 
 .image {
-   content:url("https://raw.githubusercontent.com/sgulania/sgulania.github.io/d792336a8f57343aa979ab6a8381c4e85a4b4b44/_posts/Bloch_sphere.svg");
+   content:url("https://sahilgulania.github.io/blog/Bloch_sphere.svg");
    width: 200px;
    position: relative;    
    top: 0px; left: 250px; 
