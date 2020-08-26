@@ -1,0 +1,168 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="DocOnce: https://github.com/hplgit/doconce/" />
+<meta name="description" content="Spin Square Function">
+
+<title>Spin Square</title>
+
+<!-- Bootstrap style: bootstrap -->
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<!--link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"-->
+<!--script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script-->
+
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>SageMathCell</title>
+    <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+    <script>$(function () {
+    // Make the div with id 'mycell' a Sage cell
+    sagecell.makeSagecell({inputLocation:  '#mycell',
+                           template:       sagecell.templates.minimal,
+                           evalButtonText: 'Activate'});
+    // Make *any* div with class 'compute' a Sage cell
+    sagecell.makeSagecell({inputLocation: 'div.compute',
+			   linked: true,
+                           evalButtonText: 'Evaluate'});
+    });
+    </script>
+    <link rel="stylesheet" type="text/css" href="https://sagecell.sagemath.org/static/sagecell_embed.css">
+<head>
+<h2 id="___sec1">Spin Square function </h2>
+
+<div class="compute" > <script type="text/x-sage">
+# Module for computing spin square of a 
+# spin function. Usefull in determining 
+# whether the function is eigen function
+# or not ?
+# S^{2} = \sum_{i} S^{2}(i) + 2*\sum_{i,j>i}S(i)S(j)
+def ssq(spf):
+ import sympy as sym
+ a = sym.Symbol('a',commutative=False)
+ b = sym.Symbol('b',commutative=False )
+
+ # Swap function 
+ def swapPositions(list, pos1, pos2): 
+   
+     # Storing the two elements 
+     # as a pair in a tuple variable get 
+     get = list[pos1], list[pos2] 
+        
+     # unpacking those elements 
+     list[pos2], list[pos1] = get 
+        
+     return list
+ 
+ sq = 0
+ for i in range (0, len(spf)):  #S^{2}(i) operator
+  s = 3/4*spf[0]		#S^{2} [alpha] = 3/4 [alpha]
+  for m in range (1,len(spf)):
+   s = s*spf[m]
+ 
+  sq = sq + s
+ 
+  for j in range (i+1,len(spf)): # 2*S(i)S(j) operator
+
+   if (spf[i]==a and spf[j]==a): # i=alpha and j=alpha
+    ss = 1/4*spf[0]		 # S(i)S(j)[alpha*alpha] = 1/4 [alpha*alpha]
+    for n in range (1,len(spf)):
+     ss = ss*spf[n]
+ 
+   if (spf[i]==b and spf[j]==b): # i=beta and j=beta
+    ss = 1/4*spf[0]		 # S(i)S(j)[beta*beta] = 1/4 [beta*beta] 
+    for n in range (1,len(spf)):
+     ss = ss*spf[n]
+ 
+   if (spf[i]==a and spf[j]==b): # i=alpha and j=beta
+    ss = -1/4*spf[0]		 # S(i)S(j)[alpha*beta] = -1/4 [alpha*beta] + 1/2 [beta*alpha]
+    for n in range (1,len(spf)):
+     ss = ss*spf[n]
+ 
+    l = list(spf)  
+    swapPositions(l, i, j)
+    iss = 1/2*l[0]
+    for n in range (1,len(spf)):
+     iss = iss*l[n]
+ 
+    ss = ss + iss
+ 
+   if (spf[i]==b and spf[j]==a): # i=beta and j=alpha
+    ss = -1/4*spf[0]		 # S(i)S(j)[alpha*beta] = 1/2 [alpha*beta] - 1/4 [beta*alpha]
+    for n in range (1,len(spf)):
+     ss = ss*spf[n]
+ 
+    l = list(spf)
+    swapPositions(l, i, j)
+    iss = 1/2*l[0]
+    for n in range (1,len(spf)):
+     iss = iss*l[n]
+ 
+    ss = ss + iss
+ 
+   sq = sq+2*ss  		#S^{2} = \sum_{i} S^{2}(i) + 2*\sum_{i,j>i}S(i)S(j)
+ return sq
+
+</script></div>
+
+<h2 id="___sec2">Example </h2> 
+<div class="compute"><script type="text/x-sage">
+from sympy import *                                                             
+import sympy as sym                                                             
+import sys                                                                      
+a = sym.Symbol('a',commutative=False)                                           
+b = sym.Symbol('b',commutative=False)                                           
+x = sym.Symbol('x',commutative=False)                                           
+                                                                                
+                                                                                
+##Singlet example                                                               
+#spf0 = a,b                                                                     
+#spf1 = b,a                                                                     
+                                                                                
+#spf = a*b-b*a                                                                  
+#eig = simplify(ssq(spf0)-ssq(spf1))                                    
+                                                                                
+## Doublet example                                                              
+#spf0 = a,a,b                                                                   
+#spf1 = b,a,a                                                                   
+#spf2 = a,b,a                                                                   
+                                                                                
+#spf = 2*a*a*b - b*a*a - a*b*a                                                  
+#eig = simplify(2*ssq(spf0)-ssq(spf1)-ssq(spf2))                    
+                                                                                
+##Triplet example                                                               
+#spf0 = a,b                                                                     
+#spf1 = b,a                                                                     
+                                                                                
+#spf = a*b+b*a                                                                  
+#eig = simplify(ssq(spf0)+ssq(spf1))                                    
+                                                                                
+#Not a eigenfunction                    
+spf0 = a,b                                                                      
+                                                                                
+spf = a*b                                                                       
+eig = simplify(ssq(spf0))                                                   
+                                                                                
+                                                                                
+if eig ==0:                                                                     
+        print(spf,"-","It is a singlet eigenfunction")                          
+elif simplify(0.75*spf-eig)==0:                                                 
+        print(spf,"-","It is a doublet eigenfunction")                          
+elif simplify(2.0*spf-eig)==0:                                                  
+        print(spf,"-","It is a triplet eigenfunction")                          
+elif simplify(3.75*spf-eig)==0:                                                 
+        print(spf,"-","It is a quartet eigenfunction")                          
+elif simplify(6.0*spf-eig)==0:                                                  
+        print(spf,"-","It is a quantet eigenfunction")                          
+else:                                                                           
+        print(spf,"-","It is not a eigenfunction")
+</script></div>
+<p>
+<!-- --- end exercise --- -->
+
