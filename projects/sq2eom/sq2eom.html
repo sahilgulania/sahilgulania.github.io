@@ -11,6 +11,11 @@ title: Projects
   });
 </script>
 
+<link rel="stylesheet" href="/path/to/styles/dracula.css">
+<script src="/path/to/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -174,7 +179,7 @@ Excercise: $Q =  a_{s}a_{p}^{\dagger}a_{r}a_{q}^{\dagger}$</p>
 <div class="input">
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sympy.physics.secondquant</span> <span class="k">import</span> <span class="n">AnnihilateFermion</span><span class="p">,</span> <span class="n">CreateFermion</span><span class="p">,</span> <span class="n">NO</span>
+<div class=" highlight hl-ipython3"><pre><code class="html"><span></span><span class="kn">from</span> <span class="nn">sympy.physics.secondquant</span> <span class="k">import</span> <span class="n">AnnihilateFermion</span><span class="p">,</span> <span class="n">CreateFermion</span><span class="p">,</span> <span class="n">NO</span>
 <span class="kn">from</span> <span class="nn">sympy</span> <span class="k">import</span> <span class="n">symbols</span><span class="p">,</span> <span class="n">Eq</span>
 
 <span class="n">p</span><span class="p">,</span><span class="n">q</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">s</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;p,q,r,s&#39;</span><span class="p">)</span>
@@ -187,6 +192,7 @@ Excercise: $Q =  a_{s}a_{p}^{\dagger}a_{r}a_{q}^{\dagger}$</p>
 <span class="n">nn</span> <span class="o">=</span> <span class="n">NO</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
 
 <span class="n">display</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">nn</span><span class="p">)</span>
+</code>
 </pre></div>
 
     </div>
