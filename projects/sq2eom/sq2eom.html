@@ -11,10 +11,10 @@ title: Projects
   });
 </script>
 
-<link rel="stylesheet" href="/path/to/styles/dracula.css">
-<script src="/path/to/highlight.min.js"></script>
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.1/styles/monokai-sublime.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.3.1/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-
 
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -179,7 +179,7 @@ Excercise: $Q =  a_{s}a_{p}^{\dagger}a_{r}a_{q}^{\dagger}$</p>
 <div class="input">
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><code class="html"><span></span><span class="kn">from</span> <span class="nn">sympy.physics.secondquant</span> <span class="k">import</span> <span class="n">AnnihilateFermion</span><span class="p">,</span> <span class="n">CreateFermion</span><span class="p">,</span> <span class="n">NO</span>
+<div class=" highlight hl-ipython3"><pre><code class="python"><span></span><span class="kn">from</span> <span class="nn">sympy.physics.secondquant</span> <span class="k">import</span> <span class="n">AnnihilateFermion</span><span class="p">,</span> <span class="n">CreateFermion</span><span class="p">,</span> <span class="n">NO</span>
 <span class="kn">from</span> <span class="nn">sympy</span> <span class="k">import</span> <span class="n">symbols</span><span class="p">,</span> <span class="n">Eq</span>
 
 <span class="n">p</span><span class="p">,</span><span class="n">q</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">s</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;p,q,r,s&#39;</span><span class="p">)</span>
@@ -275,7 +275,7 @@ $\displaystyle \left\{a^\dagger_{p} a^\dagger_{q} a_{r} a_{s}\right\}$
 <div class="input">
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">secondquant_gen</span> <span class="k">import</span> <span class="n">contraction</span><span class="p">,</span> <span class="n">F</span><span class="p">,</span> <span class="n">Fd</span> <span class="c1"># F = AnnihilateFermion, Fd = CreateFermion</span>
+<div class=" highlight hl-ipython3"><pre><code class="python"><span></span><span class="kn">from</span> <span class="nn">secondquant_gen</span> <span class="k">import</span> <span class="n">contraction</span><span class="p">,</span> <span class="n">F</span><span class="p">,</span> <span class="n">Fd</span> <span class="c1"># F = AnnihilateFermion, Fd = CreateFermion</span>
 <span class="kn">from</span> <span class="nn">sympy</span> <span class="k">import</span> <span class="n">symbols</span>
 
 
@@ -287,6 +287,7 @@ $\displaystyle \left\{a^\dagger_{p} a^\dagger_{q} a_{r} a_{s}\right\}$
 <span class="n">C4</span> <span class="o">=</span> <span class="n">contraction</span><span class="p">(</span><span class="n">Fd</span><span class="p">(</span><span class="n">p</span><span class="p">),</span><span class="n">Fd</span><span class="p">(</span><span class="n">q</span><span class="p">))</span>
 
 <span class="n">display</span><span class="p">(</span><span class="n">C1</span><span class="p">,</span><span class="n">C2</span><span class="p">,</span><span class="n">C3</span><span class="p">,</span><span class="n">C4</span><span class="p">)</span>
+</code>
 </pre></div>
 
     </div>
@@ -395,7 +396,7 @@ $\displaystyle \delta_{p q}$
 <div class="input">
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">secondquant_gen</span> <span class="k">import</span> <span class="n">wicks</span><span class="p">,</span> <span class="n">F</span><span class="p">,</span> <span class="n">Fd</span>
+<div class=" highlight hl-ipython3"><pre><code class="python"><span></span><span class="kn">from</span> <span class="nn">secondquant_gen</span> <span class="k">import</span> <span class="n">wicks</span><span class="p">,</span> <span class="n">F</span><span class="p">,</span> <span class="n">Fd</span>
 <span class="kn">from</span> <span class="nn">sympy</span> <span class="k">import</span> <span class="n">symbols</span><span class="p">,</span> <span class="n">Dummy</span>
 
 
@@ -403,6 +404,7 @@ $\displaystyle \delta_{p q}$
 
 <span class="n">E1</span> <span class="o">=</span> <span class="n">wicks</span><span class="p">(</span><span class="n">F</span><span class="p">(</span><span class="n">p</span><span class="p">)</span><span class="o">*</span><span class="n">Fd</span><span class="p">(</span><span class="n">q</span><span class="p">)</span><span class="o">*</span><span class="n">Fd</span><span class="p">(</span><span class="n">r</span><span class="p">))</span>
 <span class="n">display</span><span class="p">(</span><span class="n">E1</span><span class="p">)</span>
+</code>
 </pre></div>
 
     </div>
@@ -434,8 +436,9 @@ $\displaystyle \delta_{p q} a^\dagger_{r} - \delta_{p r} a^\dagger_{q} + \left\{
 <div class="input">
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">E2</span> <span class="o">=</span> <span class="n">wicks</span><span class="p">(</span><span class="n">F</span><span class="p">(</span><span class="n">p</span><span class="p">)</span><span class="o">*</span><span class="n">F</span><span class="p">(</span><span class="n">q</span><span class="p">)</span><span class="o">*</span><span class="n">Fd</span><span class="p">(</span><span class="n">r</span><span class="p">)</span><span class="o">*</span><span class="n">F</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">*</span><span class="n">Fd</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="n">Fd</span><span class="p">(</span><span class="n">u</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><code class="python"><span></span><span class="n">E2</span> <span class="o">=</span> <span class="n">wicks</span><span class="p">(</span><span class="n">F</span><span class="p">(</span><span class="n">p</span><span class="p">)</span><span class="o">*</span><span class="n">F</span><span class="p">(</span><span class="n">q</span><span class="p">)</span><span class="o">*</span><span class="n">Fd</span><span class="p">(</span><span class="n">r</span><span class="p">)</span><span class="o">*</span><span class="n">F</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">*</span><span class="n">Fd</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="n">Fd</span><span class="p">(</span><span class="n">u</span><span class="p">))</span>
 <span class="n">display</span><span class="p">(</span><span class="n">E2</span><span class="p">)</span>
+</code>
 </pre></div>
 
     </div>
@@ -493,7 +496,7 @@ $\displaystyle \delta_{p r} \delta_{q t} \delta_{s u} - \delta_{p r} \delta_{q t
 <div class="input">
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">secondquant_gen</span> <span class="k">import</span> <span class="n">wicks</span><span class="p">,</span> <span class="n">F</span><span class="p">,</span> <span class="n">Fd</span>
+<div class=" highlight hl-ipython3"><pre><code class="python"><span></span><span class="kn">from</span> <span class="nn">secondquant_gen</span> <span class="k">import</span> <span class="n">wicks</span><span class="p">,</span> <span class="n">F</span><span class="p">,</span> <span class="n">Fd</span>
 <span class="kn">from</span> <span class="nn">sympy</span> <span class="k">import</span> <span class="n">symbols</span><span class="p">,</span> <span class="n">Dummy</span>
 
 
@@ -501,6 +504,7 @@ $\displaystyle \delta_{p r} \delta_{q t} \delta_{s u} - \delta_{p r} \delta_{q t
 
 <span class="n">E1</span> <span class="o">=</span> <span class="n">wicks</span><span class="p">(</span><span class="n">F</span><span class="p">(</span><span class="n">p</span><span class="p">)</span><span class="o">*</span><span class="n">Fd</span><span class="p">(</span><span class="n">q</span><span class="p">)</span><span class="o">*</span><span class="n">Fd</span><span class="p">(</span><span class="n">r</span><span class="p">),</span><span class="n">keep_only_fully_contracted</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">display</span><span class="p">(</span><span class="n">E1</span><span class="p">)</span>
+</code>
 </pre></div>
 
     </div>
@@ -532,8 +536,9 @@ $\displaystyle 0$
 <div class="input">
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">E2</span> <span class="o">=</span> <span class="n">wicks</span><span class="p">(</span><span class="n">F</span><span class="p">(</span><span class="n">p</span><span class="p">)</span><span class="o">*</span><span class="n">F</span><span class="p">(</span><span class="n">q</span><span class="p">)</span><span class="o">*</span><span class="n">Fd</span><span class="p">(</span><span class="n">r</span><span class="p">)</span><span class="o">*</span><span class="n">F</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">*</span><span class="n">Fd</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="n">Fd</span><span class="p">(</span><span class="n">u</span><span class="p">),</span><span class="n">keep_only_fully_contracted</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><code class="python"><span></span><span class="n">E2</span> <span class="o">=</span> <span class="n">wicks</span><span class="p">(</span><span class="n">F</span><span class="p">(</span><span class="n">p</span><span class="p">)</span><span class="o">*</span><span class="n">F</span><span class="p">(</span><span class="n">q</span><span class="p">)</span><span class="o">*</span><span class="n">Fd</span><span class="p">(</span><span class="n">r</span><span class="p">)</span><span class="o">*</span><span class="n">F</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">*</span><span class="n">Fd</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="n">Fd</span><span class="p">(</span><span class="n">u</span><span class="p">),</span><span class="n">keep_only_fully_contracted</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">display</span><span class="p">(</span><span class="n">E2</span><span class="p">)</span>
+</code>
 </pre></div>
 
     </div>
@@ -626,7 +631,7 @@ $$n[a_{i}^{\dagger}a_{j}a_{a}^{\dagger}] = -a_{i}^{\dagger}a_{a}^{\dagger}a_{j} 
 <div class="input">
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sympy.physics.secondquant</span> <span class="k">import</span> <span class="n">NO</span><span class="p">,</span> <span class="n">F</span><span class="p">,</span> <span class="n">Fd</span> <span class="c1"># F = AnnihilateFermion, Fd = CreateFermion</span>
+<div class=" highlight hl-ipython3"><pre><code class="python"><span></span><span class="kn">from</span> <span class="nn">sympy.physics.secondquant</span> <span class="k">import</span> <span class="n">NO</span><span class="p">,</span> <span class="n">F</span><span class="p">,</span> <span class="n">Fd</span> <span class="c1"># F = AnnihilateFermion, Fd = CreateFermion</span>
 <span class="kn">from</span> <span class="nn">sympy</span> <span class="k">import</span> <span class="n">symbols</span>
 
 
@@ -634,6 +639,7 @@ $$n[a_{i}^{\dagger}a_{j}a_{a}^{\dagger}] = -a_{i}^{\dagger}a_{a}^{\dagger}a_{j} 
 <span class="n">a</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="n">above_fermi</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 <span class="n">display</span><span class="p">(</span><span class="n">NO</span><span class="p">(</span><span class="n">Fd</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">*</span><span class="n">F</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">*</span><span class="n">Fd</span><span class="p">(</span><span class="n">a</span><span class="p">)))</span>
+</code>
 </pre></div>
 
     </div>
@@ -694,7 +700,7 @@ $$h_{pq} = \bra{\phi_{p} (x)}(-\frac{1}{2}\nabla^{2} -\sum_{\alpha} \frac{Z_{\al
 <div class="input">
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sympy.physics.secondquant</span> <span class="k">import</span> <span class="n">wicks</span><span class="p">,</span> <span class="n">F</span><span class="p">,</span> <span class="n">Fd</span><span class="p">,</span> <span class="n">NO</span>  <span class="c1"># F = AnnihilateFermion, Fd = CreateFermion</span>
+<div class=" highlight hl-ipython3"><pre><code class="python"><span></span><span class="kn">from</span> <span class="nn">sympy.physics.secondquant</span> <span class="k">import</span> <span class="n">wicks</span><span class="p">,</span> <span class="n">F</span><span class="p">,</span> <span class="n">Fd</span><span class="p">,</span> <span class="n">NO</span>  <span class="c1"># F = AnnihilateFermion, Fd = CreateFermion</span>
 <span class="kn">from</span> <span class="nn">sympy.physics.secondquant</span> <span class="k">import</span> <span class="n">substitute_dummies</span><span class="p">,</span> <span class="n">contraction</span>
 <span class="kn">from</span> <span class="nn">sympy.physics.secondquant</span> <span class="k">import</span> <span class="n">AntiSymmetricTensor</span><span class="p">,</span> <span class="n">evaluate_deltas</span>
 <span class="kn">from</span> <span class="nn">sympy</span> <span class="k">import</span> <span class="n">symbols</span><span class="p">,</span> <span class="n">Rational</span><span class="p">,</span> <span class="n">Dummy</span>
@@ -716,6 +722,7 @@ $$h_{pq} = \bra{\phi_{p} (x)}(-\frac{1}{2}\nabla^{2} -\sum_{\alpha} \frac{Z_{\al
 
 <span class="n">eq</span> <span class="o">=</span> <span class="n">evaluate_deltas</span><span class="p">(</span><span class="n">eq</span><span class="p">)</span>                                                                
 <span class="n">display</span><span class="p">(</span><span class="n">eq</span><span class="p">)</span> 
+</code>
 </pre></div>
 
     </div>
@@ -804,7 +811,7 @@ $$ 0 = \bra{\Phi_{ij}^{ab}}e^{-T} H_{N} e^{T} \ket{\Phi_{0}}   \tag{$T_{2}$ ampl
 <div class="input">
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sympy.physics.secondquant</span> <span class="k">import</span> <span class="n">wicks</span><span class="p">,</span> <span class="n">F</span><span class="p">,</span> <span class="n">Fd</span><span class="p">,</span> <span class="n">NO</span>  <span class="c1"># F = AnnihilateFermion, Fd = CreateFermion</span>
+<div class=" highlight hl-ipython3"><pre><code class="python"><span></span><span class="kn">from</span> <span class="nn">sympy.physics.secondquant</span> <span class="k">import</span> <span class="n">wicks</span><span class="p">,</span> <span class="n">F</span><span class="p">,</span> <span class="n">Fd</span><span class="p">,</span> <span class="n">NO</span>  <span class="c1"># F = AnnihilateFermion, Fd = CreateFermion</span>
 <span class="kn">from</span> <span class="nn">sympy.physics.secondquant</span> <span class="k">import</span> <span class="n">substitute_dummies</span><span class="p">,</span> <span class="n">contraction</span>
 <span class="kn">from</span> <span class="nn">sympy.physics.secondquant</span> <span class="k">import</span> <span class="n">AntiSymmetricTensor</span><span class="p">,</span> <span class="n">evaluate_deltas</span>
 <span class="kn">from</span> <span class="nn">sympy.physics.secondquant</span> <span class="k">import</span> <span class="n">PermutationOperator</span><span class="p">,</span> <span class="n">simplify_index_permutations</span>
@@ -829,6 +836,7 @@ $$ 0 = \bra{\Phi_{ij}^{ab}}e^{-T} H_{N} e^{T} \ket{\Phi_{0}}   \tag{$T_{2}$ ampl
 <span class="n">index_rule</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;below&#39;</span><span class="p">:</span>  <span class="s1">&#39;ijklmno&#39;</span><span class="p">,</span><span class="s1">&#39;above&#39;</span><span class="p">:</span>  <span class="s1">&#39;abcdef&#39;</span><span class="p">,</span> <span class="s1">&#39;general&#39;</span><span class="p">:</span> <span class="s1">&#39;pqrs&#39;</span><span class="p">}</span>
 <span class="n">e_ccsd</span> <span class="o">=</span> <span class="n">substitute_dummies</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span> <span class="n">new_indices</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">pretty_indices</span><span class="o">=</span><span class="n">index_rule</span><span class="p">)</span>                                                        
 <span class="n">display</span><span class="p">(</span><span class="n">e_ccsd</span><span class="p">)</span> 
+</code>
 </pre></div>
 
     </div>
@@ -860,10 +868,11 @@ $\displaystyle f^{i}_{a} t^{a}_{i} - \frac{t^{a}_{j} t^{b}_{i} v^{ij}_{ab}}{2} +
 <div class="input">
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">eq</span> <span class="o">=</span> <span class="n">wicks</span><span class="p">(</span><span class="n">Fd</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">*</span><span class="n">F</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">*</span><span class="n">ccsd</span><span class="p">,</span><span class="n">simplify_kronecker_deltas</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">keep_only_fully_contracted</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>   
+<div class=" highlight hl-ipython3"><pre><code class="python"><span></span><span class="n">eq</span> <span class="o">=</span> <span class="n">wicks</span><span class="p">(</span><span class="n">Fd</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">*</span><span class="n">F</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">*</span><span class="n">ccsd</span><span class="p">,</span><span class="n">simplify_kronecker_deltas</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">keep_only_fully_contracted</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>   
 <span class="n">index_rule</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;below&#39;</span><span class="p">:</span>  <span class="s1">&#39;jklmno&#39;</span><span class="p">,</span><span class="s1">&#39;above&#39;</span><span class="p">:</span>  <span class="s1">&#39;bcdef&#39;</span><span class="p">,</span> <span class="s1">&#39;general&#39;</span><span class="p">:</span> <span class="s1">&#39;pqrs&#39;</span><span class="p">}</span>
 <span class="n">t1</span> <span class="o">=</span> <span class="p">(</span><span class="n">substitute_dummies</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span> <span class="n">new_indices</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">pretty_indices</span><span class="o">=</span><span class="n">index_rule</span><span class="p">))</span>        
 <span class="n">display</span><span class="p">(</span><span class="n">t1</span><span class="p">)</span> 
+</code>
 </pre></div>
 
     </div>
@@ -895,12 +904,13 @@ $\displaystyle - f^{j}_{b} t^{b}_{i} t^{a}_{j} + f^{j}_{b} t^{ab}_{ij} - f^{j}_{
 <div class="input">
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">eq</span> <span class="o">=</span> <span class="n">wicks</span><span class="p">(</span><span class="n">Fd</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">*</span><span class="n">Fd</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">*</span><span class="n">F</span><span class="p">(</span><span class="n">b</span><span class="p">)</span><span class="o">*</span><span class="n">F</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">*</span><span class="n">ccsd</span><span class="p">,</span><span class="n">simplify_kronecker_deltas</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">keep_only_fully_contracted</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>   
+<div class=" highlight hl-ipython3"><pre><code class="python"><span></span><span class="n">eq</span> <span class="o">=</span> <span class="n">wicks</span><span class="p">(</span><span class="n">Fd</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">*</span><span class="n">Fd</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">*</span><span class="n">F</span><span class="p">(</span><span class="n">b</span><span class="p">)</span><span class="o">*</span><span class="n">F</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">*</span><span class="n">ccsd</span><span class="p">,</span><span class="n">simplify_kronecker_deltas</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">keep_only_fully_contracted</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>   
 <span class="n">index_rule</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;below&#39;</span><span class="p">:</span>  <span class="s1">&#39;klmno&#39;</span><span class="p">,</span><span class="s1">&#39;above&#39;</span><span class="p">:</span>  <span class="s1">&#39;cdef&#39;</span><span class="p">,</span> <span class="s1">&#39;general&#39;</span><span class="p">:</span> <span class="s1">&#39;pqrs&#39;</span><span class="p">}</span>
 <span class="n">t2</span> <span class="o">=</span> <span class="n">substitute_dummies</span><span class="p">(</span><span class="n">eq</span><span class="p">,</span> <span class="n">new_indices</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">pretty_indices</span><span class="o">=</span><span class="n">index_rule</span><span class="p">)</span>    
 <span class="n">P</span> <span class="o">=</span> <span class="n">PermutList</span> <span class="o">=</span> <span class="p">[</span><span class="n">PermutationOperator</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">),</span><span class="n">PermutationOperator</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)]</span>
 <span class="n">t2</span> <span class="o">=</span> <span class="n">simplify_index_permutations</span><span class="p">(</span><span class="n">t2</span><span class="p">,</span><span class="n">PermutList</span><span class="p">)</span>
 <span class="n">display</span><span class="p">(</span><span class="n">t2</span><span class="p">)</span> 
+</code>
 </pre></div>
 
     </div>
@@ -984,7 +994,7 @@ $$\sigma_{1}=((\bar{H}_{SS}-E_{cc})R_{1})+(\bar{H}_{SD}R_{2})$$$$\sigma_{2}=(\ba
 <div class="input">
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">EOM</span><span class="o">,</span><span class="nn">SIGMA</span>
+<div class=" highlight hl-ipython3"><pre><code class="python"><span></span><span class="kn">import</span> <span class="nn">EOM</span><span class="o">,</span><span class="nn">SIGMA</span>
 <span class="n">flavor1</span> <span class="o">=</span> <span class="s2">&quot;IP&quot;</span>
 <span class="n">R0_f1</span> <span class="o">=</span> <span class="n">EOM</span><span class="o">.</span><span class="n">R0</span><span class="p">(</span><span class="n">flavor1</span><span class="p">)</span>
 <span class="n">R1_f1</span> <span class="o">=</span> <span class="n">EOM</span><span class="o">.</span><span class="n">R1</span><span class="p">(</span><span class="n">flavor1</span><span class="p">)</span>
@@ -992,6 +1002,7 @@ $$\sigma_{1}=((\bar{H}_{SS}-E_{cc})R_{1})+(\bar{H}_{SD}R_{2})$$$$\sigma_{2}=(\ba
 <span class="n">Rf1</span>  <span class="o">=</span> <span class="n">R0_f1</span> <span class="o">+</span> <span class="n">R1_f1</span> <span class="o">+</span> <span class="n">R2_f1</span>
                                                                             
 <span class="n">SIGMA</span><span class="o">.</span><span class="n">RVECTORS</span><span class="p">(</span><span class="n">R0_f1</span><span class="p">,</span><span class="n">R1_f1</span><span class="p">,</span><span class="n">R2_f1</span><span class="p">,</span><span class="n">flavor1</span><span class="p">)</span>
+</code>
 </pre></div>
 
     </div>
@@ -1082,7 +1093,7 @@ $\displaystyle ((\overline{H}_{DD}-E_{cc})R_{2}) = - f^{k}_{b} r^{b}_{ij} t^{a}_
 <div class="input">
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">EOM</span><span class="o">,</span> <span class="nn">DM</span><span class="o">,</span> <span class="nn">TDM</span> 
+<div class=" highlight hl-ipython3"><pre><code class="python"><span></span><span class="kn">import</span> <span class="nn">EOM</span><span class="o">,</span> <span class="nn">DM</span><span class="o">,</span> <span class="nn">TDM</span> 
 <span class="n">flavor1</span> <span class="o">=</span> <span class="s2">&quot;IP&quot;</span>
 <span class="n">R0_f1</span> <span class="o">=</span> <span class="n">EOM</span><span class="o">.</span><span class="n">R0</span><span class="p">(</span><span class="n">flavor1</span><span class="p">)</span>
 <span class="n">R1_f1</span> <span class="o">=</span> <span class="n">EOM</span><span class="o">.</span><span class="n">R1</span><span class="p">(</span><span class="n">flavor1</span><span class="p">)</span>
@@ -1094,6 +1105,7 @@ $\displaystyle ((\overline{H}_{DD}-E_{cc})R_{2}) = - f^{k}_{b} r^{b}_{ij} t^{a}_
 <span class="n">L2_f1</span> <span class="o">=</span> <span class="n">EOM</span><span class="o">.</span><span class="n">L2</span><span class="p">(</span><span class="n">flavor1</span><span class="p">)</span>
 <span class="n">Lf1</span>  <span class="o">=</span> <span class="n">L0_f1</span> <span class="o">+</span> <span class="n">L1_f1</span> <span class="o">+</span> <span class="n">L2_f1</span>
 <span class="n">DM</span><span class="o">.</span><span class="n">OPDM</span><span class="p">(</span><span class="n">Lf1</span><span class="p">,</span><span class="n">Rf1</span><span class="p">,</span><span class="n">flavor1</span><span class="p">)</span>
+</code>
 </pre></div>
 
     </div>
@@ -1177,7 +1189,7 @@ $\displaystyle \gamma_{ab} = l^{ij}_{a} r^{}_{i} t^{b}_{j} + \frac{l^{ij}_{a} r^
 <div class="input">
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">flavor2</span> <span class="o">=</span> <span class="s2">&quot;CCSD&quot;</span>                                                                
+<div class=" highlight hl-ipython3"><pre><code class="python"><span></span><span class="n">flavor2</span> <span class="o">=</span> <span class="s2">&quot;CCSD&quot;</span>                                                                
 <span class="n">R0_f2</span> <span class="o">=</span> <span class="n">EOM</span><span class="o">.</span><span class="n">R0</span><span class="p">(</span><span class="n">flavor2</span><span class="p">)</span>                                                    
 <span class="n">R1_f2</span> <span class="o">=</span> <span class="n">EOM</span><span class="o">.</span><span class="n">R1</span><span class="p">(</span><span class="n">flavor2</span><span class="p">)</span>                                                    
 <span class="n">R2_f2</span> <span class="o">=</span> <span class="n">EOM</span><span class="o">.</span><span class="n">R2</span><span class="p">(</span><span class="n">flavor2</span><span class="p">)</span>                                                    
@@ -1189,6 +1201,7 @@ $\displaystyle \gamma_{ab} = l^{ij}_{a} r^{}_{i} t^{b}_{j} + \frac{l^{ij}_{a} r^
 <span class="n">Lf2</span>  <span class="o">=</span> <span class="n">L0_f2</span> <span class="o">+</span> <span class="n">L1_f2</span> <span class="o">+</span> <span class="n">L2_f2</span>                                                
 
 <span class="n">TDM</span><span class="o">.</span><span class="n">OPTDM</span><span class="p">(</span><span class="n">Lf1</span><span class="p">,</span><span class="n">Rf1</span><span class="p">,</span><span class="n">Lf2</span><span class="p">,</span><span class="n">Rf2</span><span class="p">,</span><span class="n">flavor1</span><span class="p">,</span><span class="n">flavor2</span><span class="p">)</span>
+</code>
 </pre></div>
 
     </div>
