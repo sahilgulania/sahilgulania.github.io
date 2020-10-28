@@ -454,7 +454,7 @@ $\displaystyle \delta_{p r} \delta_{q t} \delta_{s u} - \delta_{p r} \delta_{q t
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Expectation-value-with-$\ket{vac}$">Expectation value with $\ket{vac}$<a class="anchor-link" href="#Expectation-value-with-$\ket{vac}$">&#182;</a></h3><p>Let $Q = M_{1}M_{2}M_{3} ... M_{n-1}M_{n}$ product of $n$ operators</p>
+<h3 id="Expectation-value-with-$\ket{vac}$">Expectation value with \(\ket{vac}\)<a class="anchor-link" href="#Expectation-value-with-$\ket{vac}$">&#182;</a></h3><p>Let $Q = M_{1}M_{2}M_{3} ... M_{n-1}M_{n}$ product of $n$ operators</p>
 <p><img src="figures/prop_wick1.jpg" width=70% height: auto></p>
 <p>From this one can easily see the importance of Wick's theorem. Lets do some checks using SymPy</p>
 
@@ -947,20 +947,22 @@ $$\begin{pmatrix}
   \begin{pmatrix}                                                               
     R_{1}\\                                                                     
     R_{2}                                                                       
-  \end{pmatrix}$$
+\end{pmatrix}$$
 <pre><code>                                                         
 </code></pre>
 <p>and</p>
-<p>$$\begin{pmatrix}                                                               
+<p>
+$$\begin{pmatrix}                                                               
     L_{1} &amp; &amp;  L_{2}                                                            
-  \end{pmatrix}<br>
-  \begin{pmatrix}<br>
-    \bar{H}<em>{SS}-E</em>{cc} &amp; \bar{H}<em>{SD} \<br>
-    \bar{H}</em>{DS} &amp; \bar{H}<em>{DD}-E</em>{cc}</p>
-<h1 id="--\end{pmatrix}-----------------------------------------------------------------">  \end{pmatrix}                                                                 <a class="anchor-link" href="#--\end{pmatrix}-----------------------------------------------------------------">&#182;</a></h1><p>\omega<br>
+  \end{pmatrix}
+  \begin{pmatrix}
+    \bar{H}_{SS}-E_{cc} &amp; \bar{H}_{SD} \\
+    \bar{H}_{DS} &amp; \bar{H}_{DD}-E_{cc}
+  \end{pmatrix}
   \begin{pmatrix}                                                               
     L_{1} &amp; &amp; L_{2},                                                            
   \end{pmatrix}    $$</p>
+
 <p>Using matrix equations</p>
 
 </div>
