@@ -126,7 +126,7 @@ Act this opeartor on \(\ket{\Psi_{N}}\)
 $$a^{\dagger}_{k}a_{k} \ket{\Psi_{N}} = a^{\dagger}_{k}a_{k} (a^{\dagger}_{N}a^{\dagger}_{N-1} ... a^{\dagger}_{k} ...  a^{\dagger}_{2} a^{\dagger}_{1}\ket{vac})$$
 Using eq.(1) and eq.(3), both \(a^{\dagger}_{k}a_{k}\)  can move next to \(a^{\dagger}_{k}\)  inside \(\Psi_{N}\) 
 $$a^{\dagger}_{k}a_{k} \ket{\Psi_{N}} = a^{\dagger}_{N}a^{\dagger}_{N-1} ...a^{\dagger}_{k}a_{k}a^{\dagger}_{k} ...  a^{\dagger}_{2} a^{\dagger}_{1}\ket{vac}  = a^{\dagger}_{N}a^{\dagger}_{N-1} ...a^{\dagger}_{k}...  a^{\dagger}_{2} a^{\dagger}_{1}\ket{vac} = +1\ket{\Psi_{N}}$$</p> 
-<h4 id="Particle-number-operator-for-$N$-particles">Particle number operator for \(N\) particles<a class="anchor-link" href="#Particle-number-operator-for-$N$-particles">&#182;</a></h4></p> $$\sum_{i=1}^{N} a^{\dagger}_{i}a_{i} \ket{\Psi_{N}} = N \ket{\Psi_{N}}</p>  $$
+<h3 id="Particle-number-operator-for-$N$-particles">Particle number operator for \(N\) particles<a class="anchor-link" href="#Particle-number-operator-for-$N$-particles">&#182;</a></h3><p> $$\sum_{i=1}^{N} a^{\dagger}_{i}a_{i} \ket{\Psi_{N}} = N \ket{\Psi_{N}}</p>  $$
 </div>
 </div>
 </div>
@@ -563,7 +563,7 @@ $\displaystyle \delta_{p r} \delta_{q t} \delta_{s u} - \delta_{p r} \delta_{q u
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Particle-Hole-formalism">Particle Hole formalism<a class="anchor-link" href="#Particle-Hole-formalism">&#182;</a></h2><p>This procedure makes the evaluation of certain matrix elements easier like</p>
+<h2 id="Particle-Hole-formalism">Particle Hole formalism<a class="anchor-link" href="#Particle-Hole-formalism">&#182;</a></h2><p>This procedure makes the evaluation of certain matrix elements easier like
 $$\bra{\Phi_{0}}\hat{H}\ket{\Phi_{0}}$$$$\bra{\Phi_{i}^{a}}\hat{H}\ket{\Phi_{0}}$$$$\bra{\Phi_{ij}^{ab}}\hat{H}\ket{\Phi_{0}}$$<p>where, $\Phi_{0}$ is Hartree-Fock determinant. Given a Hartree-Fock solution we get occupied and virtual orbitals. Lets assign symbols $(i,j,k,...)$ to occupied and $(a,b,c,...)$ to virtual.</p>
 
 </div>
@@ -572,7 +572,7 @@ $$\bra{\Phi_{0}}\hat{H}\ket{\Phi_{0}}$$$$\bra{\Phi_{i}^{a}}\hat{H}\ket{\Phi_{0}}
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We will define new set of operators</p> 
+<p>We will define new set of operators 
 $$ 
 b_{p} =
 \left\{
@@ -590,8 +590,8 @@ b_{p}^\dagger =
         a_{p}^{\dagger}  &amp; \mbox{if } p = a
     \end{array}
 \right.
-$$<p>This makes the HF determinant a Fermi vaccum</p>
-$$ b_{p}\ket{\Phi_{0}} = 0$$<p>This follows 
+$$This makes the HF determinant a Fermi vaccum
+$$ b_{p}\ket{\Phi_{0}} = 0$$This follows 
 $$ \{ b_{p},b_{q} \} = 0 \hspace{1cm} \{ b_{p}^{\dagger},b_{q}^{\dagger} \} = 0 \hspace{1cm} \{ b_{p},b_{q}^\dagger \}  = \delta_{pq}  $$</p>
 
 </div>
@@ -602,8 +602,8 @@ $$ \{ b_{p},b_{q} \} = 0 \hspace{1cm} \{ b_{p}^{\dagger},b_{q}^{\dagger} \} = 0 
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Normal-product-of-PHF">Normal product of PHF<a class="anchor-link" href="#Normal-product-of-PHF">&#182;</a></h2><p>It is defined similarly, as rearrangment of operators ($b_{p}$ \&amp; $b_{q}^{\dagger}$) such that all the creation operator are moved to left and all the anhilation operator to right, then multiply it by sign of permutation.</p>
 <p>Example: Consiper $R = b_{p}^{\dagger}b_{q}b_{r}^{\dagger}$</p>
-<p>Now, the in order to write normal product of $R$, one has to permute $b_{q}b_{r}^{\dagger}$ and multiply thw whole by -1 ( $\because$ odd parity permutation).</p>
-$$N[b_{p}^{\dagger}b_{q}b_{r}^{\dagger}] = -b_{p}^{\dagger}b_{r}^{\dagger}b_{q} $$<p>The thing one has to focus is this definition shows different result that $n[ ]$.
+<p>Now, the in order to write normal product of $R$, one has to permute $b_{q}b_{r}^{\dagger}$ and multiply thw whole by -1 ( $\because$ odd parity permutation).
+$$N[b_{p}^{\dagger}b_{q}b_{r}^{\dagger}] = -b_{p}^{\dagger}b_{r}^{\dagger}b_{q} $$The thing one has to focus is this definition shows different result that $n[ ]$.
 Lets do an excercise to explain this.</p>
 
 </div>
@@ -684,8 +684,8 @@ $\displaystyle - \left\{a^\dagger_{a} a_{j} a^\dagger_{i}\right\}$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Electronic-Hamiltonian">Electronic Hamiltonian<a class="anchor-link" href="#Electronic-Hamiltonian">&#182;</a></h2>$$H_{el} = \sum_{pq} h_{pq} a_{p}^{\dagger} a_{q} + \frac{1}{4}\sum_{pqrs} v^{pq}_{rs} a_{p}^{\dagger}a_{q}^{\dagger}a_{s}a_{r}$$<p>where,</p>
-$$h_{pq} = \bra{\phi_{p} (x)}(-\frac{1}{2}\nabla^{2} -\sum_{\alpha} \frac{Z_{\alpha}}{r_{\alpha x}} )\ket{\phi_{q} (x)}$$$$v_{pqrs} = \bra{\phi_{p} \phi_{q}}\ket{\phi_{r} \phi_{s}} = \braket{\phi_{p} \phi_{q}}{\phi_{r}\phi_{s}} - \braket{\phi_{p} \phi_{q}}{\phi_{s}\phi_{r}}$$<p>Lets find Hartree-Fock energy</p>
+<h2 id="Electronic-Hamiltonian">Electronic Hamiltonian<a class="anchor-link" href="#Electronic-Hamiltonian">&#182;</a></h2> <p>$$H_{el} = \sum_{pq} h_{pq} a_{p}^{\dagger} a_{q} + \frac{1}{4}\sum_{pqrs} v^{pq}_{rs} a_{p}^{\dagger}a_{q}^{\dagger}a_{s}a_{r}$$where,
+$$h_{pq} = \bra{\phi_{p} (x)}(-\frac{1}{2}\nabla^{2} -\sum_{\alpha} \frac{Z_{\alpha}}{r_{\alpha x}} )\ket{\phi_{q} (x)}$$$$v_{pqrs} = \bra{\phi_{p} \phi_{q}}\ket{\phi_{r} \phi_{s}} = \braket{\phi_{p} \phi_{q}}{\phi_{r}\phi_{s}} - \braket{\phi_{p} \phi_{q}}{\phi_{s}\phi_{r}}$$ Lets find Hartree-Fock energy</p>
 
 </div>
 </div>
@@ -773,8 +773,8 @@ $\displaystyle h^{i}_{i} + \frac{v^{ij}_{ij}}{2}$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Normal-ordered-Hamiltonian">Normal ordered Hamiltonian<a class="anchor-link" href="#Normal-ordered-Hamiltonian">&#182;</a></h2>$$H_{N} = \sum_{pq} h_{pq} N[a_{p}^{\dagger} a_{q}] + \frac{1}{4}\sum_{pqrs} v^{pq}_{rs} N[a_{p}^{\dagger}a_{q}^{\dagger}a_{s}a_{r}]$$<p>One can show that</p>
-$$H_{el} = H_{N} + E_{HF}$$<p>From now on we will use $H_{N}$ or computing matrix elements, also $H_{N}$ measures the correlation effect</p>
+<h2 id="Normal-ordered-Hamiltonian">Normal ordered Hamiltonian<a class="anchor-link" href="#Normal-ordered-Hamiltonian">&#182;</a></h2><p>$$H_{N} = \sum_{pq} h_{pq} N[a_{p}^{\dagger} a_{q}] + \frac{1}{4}\sum_{pqrs} v^{pq}_{rs} N[a_{p}^{\dagger}a_{q}^{\dagger}a_{s}a_{r}]$$ One can show that 
+$$H_{el} = H_{N} + E_{HF}$$ From now on we will use $H_{N}$ or computing matrix elements, also $H_{N}$ measures the correlation effect</p>
 
 </div>
 </div>
@@ -782,7 +782,7 @@ $$H_{el} = H_{N} + E_{HF}$$<p>From now on we will use $H_{N}$ or computing matri
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Baker-Campbell-Hauersdorf">Baker-Campbell-Hauersdorf<a class="anchor-link" href="#Baker-Campbell-Hauersdorf">&#182;</a></h2>$$e^{-B} A  e^{B} = A + [A,B] + \frac{1}{2!}[[A,B],B] + \frac{1}{3!}[[[A,B],B],B] +  ... $$<p>if $A$ is electronic Hamiltonian or normal ordered Hamiltonian and $B$ any excitation operator, then due to the stucture of Hamiltonian the series truncate after fourth expansion. This is the reason we call coupled cluster as coupled cluster.</p>
+<h2 id="Baker-Campbell-Hauersdorf">Baker-Campbell-Hauersdorf<a class="anchor-link" href="#Baker-Campbell-Hauersdorf">&#182;</a></h2><p> $$e^{-B} A  e^{B} = A + [A,B] + \frac{1}{2!}[[A,B],B] + \frac{1}{3!}[[[A,B],B],B] +  ... $$ if $A$ is electronic Hamiltonian or normal ordered Hamiltonian and $B$ any excitation operator, then due to the stucture of Hamiltonian the series truncate after fourth expansion. This is the reason we call coupled cluster as coupled cluster.</p>
 
 </div>
 </div>
@@ -790,12 +790,12 @@ $$H_{el} = H_{N} + E_{HF}$$<p>From now on we will use $H_{N}$ or computing matri
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Coupled-Cluster-Singles-and-Doubles-(CCSD)">Coupled Cluster Singles and Doubles (CCSD)<a class="anchor-link" href="#Coupled-Cluster-Singles-and-Doubles-(CCSD)">&#182;</a></h2>$$\Psi_{CCSD} = e^{T} \ket{\Phi_{0}}$$<p>where, 
-$$ T_{1} = \sum_{ia}t_{i}^{a}a^{\dagger}i$$</p>
-$$ T_{2} = \frac{1}{4}\sum_{ijab}t_{ij}^{ab}a^{\dagger}b^{\dagger}ji$$<p>Equations which need to be solved
-$$ E_{CCSD}^{cor} = \bra{\Phi_{0}}e^{-T} H_{N} e^{T} \ket{\Phi_{0}}   \tag{Correltion energy}$$</p>
-$$ 0 = \bra{\Phi_{i}^{a}}e^{-T} H_{N} e^{T} \ket{\Phi_{0}}   \tag{$T_{1}$ amplitude}$$<p></p>
-$$ 0 = \bra{\Phi_{ij}^{ab}}e^{-T} H_{N} e^{T} \ket{\Phi_{0}}   \tag{$T_{2}$ amplitude}$$<p></p>
+<h2 id="Coupled-Cluster-Singles-and-Doubles-(CCSD)">Coupled Cluster Singles and Doubles (CCSD)<a class="anchor-link" href="#Coupled-Cluster-Singles-and-Doubles-(CCSD)">&#182;</a></h2><p> $$\Psi_{CCSD} = e^{T} \ket{\Phi_{0}}$$ where, 
+$$ T_{1} = \sum_{ia}t_{i}^{a}a^{\dagger}i$$
+$$ T_{2} = \frac{1}{4}\sum_{ijab}t_{ij}^{ab}a^{\dagger}b^{\dagger}ji$$ Equations which need to be solved
+$$ E_{CCSD}^{cor} = \bra{\Phi_{0}}e^{-T} H_{N} e^{T} \ket{\Phi_{0}}   \tag{Correltion energy}$$
+$$ 0 = \bra{\Phi_{i}^{a}}e^{-T} H_{N} e^{T} \ket{\Phi_{0}}   \tag{$T_{1}$ amplitude}$$
+$$ 0 = \bra{\Phi_{ij}^{ab}}e^{-T} H_{N} e^{T} \ket{\Phi_{0}}   \tag{$T_{2}$ amplitude}$$</p>
 <p>Lets see the power of SymPy now,</p>
 
 </div>
@@ -936,7 +936,7 @@ $\displaystyle f^{k}_{c} t^{c}_{i} t^{ab}_{jk} P(ij) + f^{k}_{c} t^{a}_{k} t^{bc
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Equation-of-motion-Coupled-Cluster">Equation-of-motion Coupled-Cluster<a class="anchor-link" href="#Equation-of-motion-Coupled-Cluster">&#182;</a></h2><p>EOM-CC allows to compute excited and open-shell character electronic states. There are many flavor depending on the target state from reference.</p>
-<h4 id="Energy-and-amplitude-equations-of-EOM-CC">Energy and amplitude equations of EOM-CC<a class="anchor-link" href="#Energy-and-amplitude-equations-of-EOM-CC">&#182;</a></h4>$$\bar{H} = e^{-T} H_{N} e^{T}$$$$\bra{\Phi_{ij..}^{ab..}}\bar{H}\hat{R}\ket{\Phi_{0}} = E_{EOM} \bra{\Phi_{ij..}^{ab..}}\hat{R}\ket{\Phi_{0}}$$$$\bra{\Phi_{ij..}^{ab..}}[\bar{H}-E_{cc},\hat{R}]\ket{\Phi_{0}} = \Delta E_{EOM} \bra{\Phi_{ij..}^{ab..}}\hat{R}\ket{\Phi_{0}}$$<p>Last equation is the one which we will derive using SymPy</p>
+<h3 id="Energy-and-amplitude-equations-of-EOM-CC">Energy and amplitude equations of EOM-CC<a class="anchor-link" href="#Energy-and-amplitude-equations-of-EOM-CC">&#182;</a></h3><p>$$\bar{H} = e^{-T} H_{N} e^{T}$$$$\bra{\Phi_{ij..}^{ab..}}\bar{H}\hat{R}\ket{\Phi_{0}} = E_{EOM} \bra{\Phi_{ij..}^{ab..}}\hat{R}\ket{\Phi_{0}}$$$$\bra{\Phi_{ij..}^{ab..}}[\bar{H}-E_{cc},\hat{R}]\ket{\Phi_{0}} = \Delta E_{EOM} \bra{\Phi_{ij..}^{ab..}}\hat{R}\ket{\Phi_{0}}$$ Last equation is the one which we will derive using SymPy</p>
 
 </div>
 </div>
@@ -944,7 +944,7 @@ $\displaystyle f^{k}_{c} t^{c}_{i} t^{ab}_{jk} P(ij) + f^{k}_{c} t^{a}_{k} t^{bc
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Example - EOM-IP-CCSD using genralized Davidson method</p>
+<p>Example - EOM-IP-CCSD using genralized Davidson method
 $$\begin{pmatrix}                                                               
     \bar{H}_{SS} - E_{cc} &amp; \bar{H}_{SD} \\                                     
     \bar{H}_{DS}          &amp;  \bar{H}_{DD} - E_{cc}                              
@@ -969,7 +969,7 @@ $$\begin{pmatrix}
     L_{1} &amp; &amp; L_{2},                                                            
   \end{pmatrix}    $$
 
-<p>Using matrix equations</p>
+Using matrix equations</p>
 
 </div>
 </div>
@@ -977,9 +977,9 @@ $$\begin{pmatrix}
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Need right $\sigma$ amplitudes of EOM-IP-CCSD amplitudes and for this we need</p>
-$$\bra{\Phi_{i}}[\bar{H}-E_{cc},\hat{R_{1}}]\ket{\Phi_{0}} = ((\bar{H}_{SS} - E_{cc}) R_{1})$$$$\bra{\Phi_{ij}^{a}}[\bar{H},\hat{R_{1}}]\ket{\Phi_{0}} = (\bar{H}_{DS} R_{1}) $$$$\bra{\Phi_{i}}[\bar{H},\hat{R_{2}}]\ket{\Phi_{0}} = (\bar{H}_{SD} R_{2})$$$$\bra{\Phi_{ij}^{a}}[\bar{H}-E_{cc},\hat{R_{2}}]\ket{\Phi_{0}} =((\bar{H}_{DD} - E_{cc}) R_{2}) $$<p>Therefore, trial vectors are defined as</p>
-$$\sigma_{1}=((\bar{H}_{SS}-E_{cc})R_{1})+(\bar{H}_{SD}R_{2})$$$$\sigma_{2}=(\bar{H}_{DS}R_{1}) +((\bar{H}_{DD}-E_{cc})R_{2})$$<p>Similarly, left vectors are defined. Lets use power of SymPy for right $\sigma$ amplitudes of EOM-IP-CCSD</p>
+<p>Need right $\sigma$ amplitudes of EOM-IP-CCSD amplitudes and for this we need
+$$\bra{\Phi_{i}}[\bar{H}-E_{cc},\hat{R_{1}}]\ket{\Phi_{0}} = ((\bar{H}_{SS} - E_{cc}) R_{1})$$$$\bra{\Phi_{ij}^{a}}[\bar{H},\hat{R_{1}}]\ket{\Phi_{0}} = (\bar{H}_{DS} R_{1}) $$$$\bra{\Phi_{i}}[\bar{H},\hat{R_{2}}]\ket{\Phi_{0}} = (\bar{H}_{SD} R_{2})$$$$\bra{\Phi_{ij}^{a}}[\bar{H}-E_{cc},\hat{R_{2}}]\ket{\Phi_{0}} =((\bar{H}_{DD} - E_{cc}) R_{2}) $$Therefore, trial vectors are defined as
+$$\sigma_{1}=((\bar{H}_{SS}-E_{cc})R_{1})+(\bar{H}_{SD}R_{2})$$$$\sigma_{2}=(\bar{H}_{DS}R_{1}) +((\bar{H}_{DD}-E_{cc})R_{2})$$Similarly, left vectors are defined. Lets use power of SymPy for right $\sigma$ amplitudes of EOM-IP-CCSD</p>
 
 </div>
 </div>
