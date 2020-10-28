@@ -7,7 +7,7 @@ title: Projects
 
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
-    "HTML-CSS": { scale: 165}
+    "HTML-CSS": { scale: 130}
   });
 </script>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
@@ -45,17 +45,18 @@ $$\newcommand{\ket}[1]{\left|{#1}\right\rangle}
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Second-Quantization">Second Quantization<a class="anchor-link" href="#Second-Quantization">&#182;</a></h3><p>In this section we will derive the fermionic algebra in second quantization representation from first quantization. Once the fermionic algebra is established, we will derive the relation between the its elements</p>
-$$ \ket{k} = {a^{+}_{k}}\ket{vac} $$<p>The opertor $a^{+}_{k}$ has created an electron on the vaccum state. 
+$$ \ket{k} = {a^{+}_{k}}\ket{vac} $$<p>The opertor \(a^{+}_{k}\) has created an electron on the vaccum state.</p> 
 $$\phi_{k}(1) \longleftrightarrow {a^{+}_{k}}\ket{vac} $$
-$\ket{vac}$ is an abstract vaccum state and $\braket{vac}{vac} = 1$
-If there are two electrons the wavefunction in first quantization is 
+
+<p>\(\ket{vac}\) is an abstract vaccum state and \(\braket{vac}{vac} = 1\)
+If there are two electrons the wavefunction in first quantization is </p>
 $$ \Phi(1,2) = \frac{1}{\sqrt{2}} 
 \begin{vmatrix}
 \phi_{i}(1) &amp; \phi_{k}(1) \\
 \phi_{i}(2) &amp; \phi_{k}(2) 
-\end{vmatrix} $$</p>
-<p>The same in second quantization follows as (keeping normalization included) 
-$$\ket{ik} = {a^{+}_{i}a^{+}_{k}}\ket{vac} $$</p>
+\end{vmatrix} $$
+<p>The same in second quantization follows as (keeping normalization included)</p> 
+$$\ket{ik} = {a^{+}_{i}a^{+}_{k}}\ket{vac} $$
 
 </div>
 </div>
@@ -63,8 +64,9 @@ $$\ket{ik} = {a^{+}_{i}a^{+}_{k}}\ket{vac} $$</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>As $ \Phi(1,2)$ is an antisymmetric function therefore the creation operator in second quantization should respect this antisymmetry.</p>
-$$\Phi(2,1) = - \Phi(1,2)  \longleftrightarrow {a^{+}_{k}a^{+}_{i}}\ket{vac} = - {a^{+}_{i}a^{+}_{k}}\ket{vac} $$<p>One can see that the antisymmetry requirement is fulfilled by having the anticommutation relation between creation operators.</p>
+<p>As \(\Phi(1,2)\) is an antisymmetric function therefore the creation operator in second quantization should respect this antisymmetry.</p>
+$$\Phi(2,1) = - \Phi(1,2)  \longleftrightarrow {a^{+}_{k}a^{+}_{i}}\ket{vac} = - {a^{+}_{i}a^{+}_{k}}\ket{vac} $$
+<p>One can see that the antisymmetry requirement is fulfilled by having the anticommutation relation between creation operators.</p>
 $$a^{+}_{k}a^{+}_{i} + a^{+}_{i}a^{+}_{k} = \{a^{+}_{k} , a^{+}_{i} \} = 0 \tag{QED 1} $$
 </div>
 </div>
@@ -72,13 +74,14 @@ $$a^{+}_{k}a^{+}_{i} + a^{+}_{i}a^{+}_{k} = \{a^{+}_{k} , a^{+}_{i} \} = 0 \tag{
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Now we will repeat the same excercice for anhilation operators. Consider first one-electron system by creating an electron on $i$th orbital using $a_{i}^{+} $. We can define the anhilator operator $a_{i}$, which act on the former state and returns back the system to $\ket{vac}$.</p>
-$$a_{i} a_{i}^{+} \ket{vac} = \ket{vac}$$<p></p>
-<p>When there is no electron in a orbital $i$, then it should result to zero. 
-$$a_{i} \ket{vac} = 0$$</p>
+<p>Now we will repeat the same excercice for anhilation operators. Consider first one-electron system by creating an electron on \(i\)th orbital using \(a_{i}^{+}\). We can define the anhilator operator \(a_{i}\), which act on the former state and returns back the system to
+ \(\ket{vac}\).</p>
+$$a_{i} a_{i}^{+} \ket{vac} = \ket{vac}$$
+<p>When there is no electron in a orbital $i$, then it should result to zero.</p> 
+$$a_{i} \ket{vac} = 0$$
 <p>In order to establish the anticommutation of anhilation operators we will utilize anticommutation relation of creation operators.</p>
-$$ a_{i} a_{k} \ket{ki} = \ket{vac} \ \ \  \&amp; \ \ \  a_{k} a_{i} \ket{ik} = \ket{vac} = -a_{k} a_{i} \ket{ki}$$<p>Therefore, 
-$$ a_{i}a_{k} + a_{k}a_{i}  = \{a_{k}, a_{i}\} = 0 \tag{QED 2}$$</p>
+$$ a_{i} a_{k} \ket{ki} = \ket{vac} \ \ \  \&amp; \ \ \  a_{k} a_{i} \ket{ik} = \ket{vac} = -a_{k} a_{i} \ket{ki}$$<p>Therefore,</p> 
+$$ a_{i}a_{k} + a_{k}a_{i}  = \{a_{k}, a_{i}\} = 0 \tag{QED 2}$$
 
 </div>
 </div>
@@ -86,10 +89,10 @@ $$ a_{i}a_{k} + a_{k}a_{i}  = \{a_{k}, a_{i}\} = 0 \tag{QED 2}$$</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Now we already have two anticommutation relation and will try to derive the third, between creation and anhilation operators. Consider two orbitals $i \ \&amp; \ k$, where $i\neq k$</p>
+<p>Now we already have two anticommutation relation and will try to derive the third, between creation and anhilation operators. Consider two orbitals \(i \ \&amp; \ k\), where \(i\neq k\)</p>
 $$a_{i}a_{k}^{+}\ket{i} = a_{i}\ket{ki} = - a_{i}\ket{ik} = - \ket{k}$$<p>Reversing the action,</p>
 $$a_{k}^{+} a_{i}\ket{i} = \ket{k}$$<p>Comparing both</p>
-$$a_{k}^{+} a_{i} + a_{i}a_{k}^{+} = \{ a_{i}, a_{k}^{+} \} = 0 $$<p>But when $i = k$, then</p>
+$$a_{k}^{+} a_{i} + a_{i}a_{k}^{+} = \{ a_{i}, a_{k}^{+} \} = 0 $$<p>But when \(i = k\), then</p>
 $$a_{i}^{+} a_{i} + a_{i}a_{i}^{+} = \{ a_{i}, a_{i}^{+} \} = 1 $$<p>Therefore the final expression which captures both sitation is</p>
 $$a_{i}^{+} a_{k} + a_{k}a_{i}^{+} = \{ a_{i}^{+}, a_{k} \} = \delta_{ik} \tag{QED 3}$$<p></p>
 
@@ -101,10 +104,10 @@ $$a_{i}^{+} a_{k} + a_{k}a_{i}^{+} = \{ a_{i}^{+}, a_{k} \} = \delta_{ik} \tag{Q
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Last, we need to establish the adjoint relation between anhilation and creation operator. Consider</p>
 $$\bra{vac}a_{i}a_{k}^{+}\ket{vac} = \delta_{ik}$$<p>From first quantization</p>
-$$\braket {\phi_{i}}{\phi_{k}} = \delta_{ik}$$<p>Using second quantization on right hand side where $\dagger$ indicates hermitian conjugate</p>
+$$\braket {\phi_{i}}{\phi_{k}} = \delta_{ik}$$<p>Using second quantization on right hand side where \(\dagger\) indicates hermitian conjugate</p>
 $$\bra{vac}(a_{i}^{+})^{\dagger} a_{k}^{\dagger}\ket{vac} = \delta_{ik}$$<p>It is only true if</p>
-$$(a_{i}^{+})^{\dagger} = a_{i}  \tag{QED 4}$$<p>Hence, $a_{i}^{+} = a_{i}^{\dagger}$ which means creation operator for $i$th orbital is hermitian conjugate of
-anhilation operator for the same orbital. From now on for creation operator we will use  $\dagger$ as superscript instead of $+$</p>
+$$(a_{i}^{+})^{\dagger} = a_{i}  \tag{QED 4}$$<p>Hence, \(a_{i}^{+} = a_{i}^{\dagger}\) which means creation operator for \(i\)th orbital is hermitian conjugate of
+anhilation operator for the same orbital. From now on for creation operator we will use  \(\dagger\) as superscript instead of \(+\)</p>
 
 </div>
 </div>
@@ -112,14 +115,15 @@ anhilation operator for the same orbital. From now on for creation operator we w
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Particle-number-operator">Particle number operator<a class="anchor-link" href="#Particle-number-operator">&#182;</a></h3><p>We succesfully showed the transformation of basis from first quantization to second quantization by creating fermionic algebra. Now we will do the same for operators. Lets look at number operator for $N$ fermions in $N$ orthogonal basis. The wavefuntion can be written as 
+<h3 id="Particle-number-operator">Particle number operator<a class="anchor-link" href="#Particle-number-operator">&#182;</a></h3><p>
+We succesfully showed the transformation of basis from first quantization to second quantization by creating fermionic algebra. Now we will do the same for operators. Lets look at number operator for \(N\) fermions in \(N\) orthogonal basis. The wavefuntion can be written as</p> 
 $$\ket{\Psi_{N}} =  a^{\dagger}_{N}a^{\dagger}_{N-1} ... a^{\dagger}_{2} a^{\dagger}_{1}\ket{vac}$$
-Define number operator for $k$th orbital 
+<p>Define number operator for \(k\)th orbital</p>
 $$a^{\dagger}_{k}a_{k}  $$
-Act this opeartor on $\ket{\Psi_{N}}$
-$$a^{\dagger}_{k}a_{k} \ket{\Psi_{N}} = a^{\dagger}_{k}a_{k} (a^{\dagger}_{N}a^{\dagger}_{N-1} ... a^{\dagger}_{k} ...  a^{\dagger}_{2} a^{\dagger}_{1}\ket{vac})$$</p>
-<p>Using eq.(1) and eq.(3), both $a^{\dagger}_{k}a_{k}$ can move next to $a^{\dagger}_{k}$ inside $\Psi_{N}$</p>
-$$a^{\dagger}_{k}a_{k} \ket{\Psi_{N}} = a^{\dagger}_{N}a^{\dagger}_{N-1} ...a^{\dagger}_{k}a_{k}a^{\dagger}_{k} ...  a^{\dagger}_{2} a^{\dagger}_{1}\ket{vac}  = a^{\dagger}_{N}a^{\dagger}_{N-1} ...a^{\dagger}_{k}...  a^{\dagger}_{2} a^{\dagger}_{1}\ket{vac} = +1\ket{\Psi_{N}}$$<h4 id="Particle-number-operator-for-$N$-particles">Particle number operator for $N$ particles<a class="anchor-link" href="#Particle-number-operator-for-$N$-particles">&#182;</a></h4>$$\sum_{i=1}^{N} a^{\dagger}_{i}a_{i} \ket{\Psi_{N}} = N \ket{\Psi_{N}} $$
+<p>Act this opeartor on \(\ket{\Psi_{N}}\) </p>
+$$a^{\dagger}_{k}a_{k} \ket{\Psi_{N}} = a^{\dagger}_{k}a_{k} (a^{\dagger}_{N}a^{\dagger}_{N-1} ... a^{\dagger}_{k} ...  a^{\dagger}_{2} a^{\dagger}_{1}\ket{vac})$$
+<p>Using eq.(1) and eq.(3), both \(a^{\dagger}_{k}a_{k}\)  can move next to \(a^{\dagger}_{k}\)  inside \(\Psi_{N}\) </p>
+$$a^{\dagger}_{k}a_{k} \ket{\Psi_{N}} = a^{\dagger}_{N}a^{\dagger}_{N-1} ...a^{\dagger}_{k}a_{k}a^{\dagger}_{k} ...  a^{\dagger}_{2} a^{\dagger}_{1}\ket{vac}  = a^{\dagger}_{N}a^{\dagger}_{N-1} ...a^{\dagger}_{k}...  a^{\dagger}_{2} a^{\dagger}_{1}\ket{vac} = +1\ket{\Psi_{N}}$$<h4 id="Particle-number-operator-for-$N$-particles">Particle number operator for \(N\) particles<a class="anchor-link" href="#Particle-number-operator-for-$N$-particles">&#182;</a></h4>$$\sum_{i=1}^{N} a^{\dagger}_{i}a_{i} \ket{\Psi_{N}} = N \ket{\Psi_{N}} $$
 </div>
 </div>
 </div>
@@ -948,10 +952,9 @@ $$\begin{pmatrix}
     R_{1}\\                                                                     
     R_{2}                                                                       
 \end{pmatrix}$$
-<pre><code>                                                         
-</code></pre>
-<p>and</p>
-<p>
+
+<p><\p>
+
 $$\begin{pmatrix}                                                               
     L_{1} &amp; &amp;  L_{2}                                                            
   \end{pmatrix}
@@ -961,7 +964,7 @@ $$\begin{pmatrix}
   \end{pmatrix}
   \begin{pmatrix}                                                               
     L_{1} &amp; &amp; L_{2},                                                            
-  \end{pmatrix}    $$</p>
+  \end{pmatrix}    $$
 
 <p>Using matrix equations</p>
 
