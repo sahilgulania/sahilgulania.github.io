@@ -104,11 +104,11 @@ $$a_{i}^{+} a_{k} + a_{k}a_{i}^{+} = \{ a_{i}^{+}, a_{k} \} = \delta_{ik} \tag{Q
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Last, we need to establish the adjoint relation between anhilation and creation operator. Consider</p>
-$$\bra{vac}a_{i}a_{k}^{+}\ket{vac} = \delta_{ik}$$<p>From first quantization</p>
-$$\braket {\phi_{i}}{\phi_{k}} = \delta_{ik}$$<p>Using second quantization on right hand side where \(\dagger\) indicates hermitian conjugate</p>
-$$\bra{vac}(a_{i}^{+})^{\dagger} a_{k}^{\dagger}\ket{vac} = \delta_{ik}$$<p>It is only true if</p>
-$$(a_{i}^{+})^{\dagger} = a_{i}  \tag{QED 4}$$<p>Hence, \(a_{i}^{+} = a_{i}^{\dagger}\) which means creation operator for \(i\)th orbital is hermitian conjugate of
+<p>Last, we need to establish the adjoint relation between anhilation and creation operator. Consider
+$$\bra{vac}a_{i}a_{k}^{+}\ket{vac} = \delta_{ik}$$ From first quantization
+$$\braket {\phi_{i}}{\phi_{k}} = \delta_{ik}$$ Using second quantization on right hand side where \(\dagger\) indicates hermitian conjugate
+$$\bra{vac}(a_{i}^{+})^{\dagger} a_{k}^{\dagger}\ket{vac} = \delta_{ik}$$ It is only true if
+$$(a_{i}^{+})^{\dagger} = a_{i}  \tag{QED 4}$$ Hence, \(a_{i}^{+} = a_{i}^{\dagger}\) which means creation operator for \(i\)th orbital is hermitian conjugate of
 anhilation operator for the same orbital. From now on for creation operator we will use  \(\dagger\) as superscript instead of \(+\)</p>
 
 </div>
@@ -118,27 +118,29 @@ anhilation operator for the same orbital. From now on for creation operator we w
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Particle-number-operator">Particle number operator<a class="anchor-link" href="#Particle-number-operator">&#182;</a></h2><p>
-We succesfully showed the transformation of basis from first quantization to second quantization by creating fermionic algebra. Now we will do the same for operators. Lets look at number operator for \(N\) fermions in \(N\) orthogonal basis. The wavefuntion can be written as</p> 
+We succesfully showed the transformation of basis from first quantization to second quantization by creating fermionic algebra. Now we will do the same for operators. Lets look at number operator for \(N\) fermions in \(N\) orthogonal basis. The wavefuntion can be written as 
 $$\ket{\Psi_{N}} =  a^{\dagger}_{N}a^{\dagger}_{N-1} ... a^{\dagger}_{2} a^{\dagger}_{1}\ket{vac}$$
-<p>Define number operator for \(k\)th orbital</p>
+Define number operator for \(k\)th orbital
 $$a^{\dagger}_{k}a_{k}  $$
-<p>Act this opeartor on \(\ket{\Psi_{N}}\) </p>
+Act this opeartor on \(\ket{\Psi_{N}}\) 
 $$a^{\dagger}_{k}a_{k} \ket{\Psi_{N}} = a^{\dagger}_{k}a_{k} (a^{\dagger}_{N}a^{\dagger}_{N-1} ... a^{\dagger}_{k} ...  a^{\dagger}_{2} a^{\dagger}_{1}\ket{vac})$$
-<p>Using eq.(1) and eq.(3), both \(a^{\dagger}_{k}a_{k}\)  can move next to \(a^{\dagger}_{k}\)  inside \(\Psi_{N}\) </p>
-$$a^{\dagger}_{k}a_{k} \ket{\Psi_{N}} = a^{\dagger}_{N}a^{\dagger}_{N-1} ...a^{\dagger}_{k}a_{k}a^{\dagger}_{k} ...  a^{\dagger}_{2} a^{\dagger}_{1}\ket{vac}  = a^{\dagger}_{N}a^{\dagger}_{N-1} ...a^{\dagger}_{k}...  a^{\dagger}_{2} a^{\dagger}_{1}\ket{vac} = +1\ket{\Psi_{N}}$$<h4 id="Particle-number-operator-for-$N$-particles">Particle number operator for \(N\) particles<a class="anchor-link" href="#Particle-number-operator-for-$N$-particles">&#182;</a></h4>$$\sum_{i=1}^{N} a^{\dagger}_{i}a_{i} \ket{\Psi_{N}} = N \ket{\Psi_{N}} $$
+Using eq.(1) and eq.(3), both \(a^{\dagger}_{k}a_{k}\)  can move next to \(a^{\dagger}_{k}\)  inside \(\Psi_{N}\) 
+$$a^{\dagger}_{k}a_{k} \ket{\Psi_{N}} = a^{\dagger}_{N}a^{\dagger}_{N-1} ...a^{\dagger}_{k}a_{k}a^{\dagger}_{k} ...  a^{\dagger}_{2} a^{\dagger}_{1}\ket{vac}  = a^{\dagger}_{N}a^{\dagger}_{N-1} ...a^{\dagger}_{k}...  a^{\dagger}_{2} a^{\dagger}_{1}\ket{vac} = +1\ket{\Psi_{N}}$$</p> 
+<h4 id="Particle-number-operator-for-$N$-particles">Particle number operator for \(N\) particles<a class="anchor-link" href="#Particle-number-operator-for-$N$-particles">&#182;</a></h4></p> $$\sum_{i=1}^{N} a^{\dagger}_{i}a_{i} \ket{\Psi_{N}} = N \ket{\Psi_{N}}</p>  $$
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Parity-of-permutation">Parity of permutation<a class="anchor-link" href="#Parity-of-permutation">&#182;</a></h2>$$p q r s \xrightarrow[]{(12)(34)} q p s r$$<p></p>
-<p>The total number of transposition required to decompose any permutation $P$ is known as its parity, $\mathcal{p}$</p>
-<p>If the total number is even then its called even parity</p>
-<p>If the total number is odd then its called odd parity</p>
-<p>Sign of permutation $P$ is defined as</p>
-$$sgn(P) =  -1^{p}$$<p>Hence,</p>
-$$sgn(P_{odd}) =  -1 \hspace{2cm} sgn(P_{even}) =  1$$
+<h2 id="Parity-of-permutation">Parity of permutation<a class="anchor-link" href="#Parity-of-permutation">&#182;</a></h2>
+<p>$$p q r s \xrightarrow[]{(12)(34)} q p s r$$
+The total number of transposition required to decompose any permutation $P$ is known as its parity, $\mathcal{p}$
+If the total number is even then its called even parity
+If the total number is odd then its called odd parity
+Sign of permutation $P$ is defined as
+$$sgn(P) =  -1^{p}$$ Hence,
+$$sgn(P_{odd}) =  -1 \hspace{2cm} sgn(P_{even}) =  1$$ </p> 
 </div>
 </div>
 </div>
@@ -147,8 +149,9 @@ $$sgn(P_{odd}) =  -1 \hspace{2cm} sgn(P_{even}) =  1$$
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Normal-product">Normal product<a class="anchor-link" href="#Normal-product">&#182;</a></h2><p>Given the product of operators, the normal product is defined as rearrangment of operators such that all the creation operator are moved to left and all the anhilation operator to right, then multiply it by sign of permutation.</p>
 <p>Example: Consider $Q = a_{p}^{\dagger}a_{q}a_{r}^{\dagger}$</p>
-<p>Now, the in order to write normal product of $Q$, one has to permute $a_{q}a_{r}^{\dagger}$ and multiply thw whole by -1 ( $\because$ odd parity permutation).</p>
-$$n[a_{p}^{\dagger}a_{q}a_{r}^{\dagger}] = -a_{p}^{\dagger}a_{r}^{\dagger}a_{q} $$<p>Excercise: $Q =  a_{s}a_{p}^{\dagger}a_{r}a_{q}^{\dagger}$</p>
+<p>Now, the in order to write normal product of $Q$, one has to permute $a_{q}a_{r}^{\dagger}$ and multiply thw whole by -1 ( $\because$ odd parity permutation).
+$$n[a_{p}^{\dagger}a_{q}a_{r}^{\dagger}] = -a_{p}^{\dagger}a_{r}^{\dagger}a_{q} $$ 
+Excercise: $Q =  a_{s}a_{p}^{\dagger}a_{r}a_{q}^{\dagger}$</p>
 <p>1) $n[Q]$</p>
 <p>2) $n[n[Q]]$ (nomal product is idempotent operator)</p>
 
