@@ -2,12 +2,12 @@
 layout: default
 title: Projects
 ---
-<SCRIPT SRC='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></SCRIPT>
+<SCRIPT SRC='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></SCRIPT>
 <SCRIPT>MathJax.Hub.Config({ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}})</SCRIPT>
 
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
-    "HTML-CSS": { scale: 130}
+    "HTML-CSS": { scale: 150}
   });
 </script>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
@@ -32,7 +32,7 @@ title: Projects
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">&#182;</a></h3><p>We will have hands on tutorial for the derivation of EOM-CCSD amplitudes, one and two particle density matrix. I have developed a symbolic library using <a href="https://www.sympy.org/en/index.html">SymPy</a> for deriving analytical expressions which can be easily extended to any operator.</p>
+<h2 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">&#182;</a></h2><p>We will have hands on tutorial for the derivation of EOM-CCSD amplitudes, one and two particle density matrix. I have developed a symbolic library using <a href="https://www.sympy.org/en/index.html">SymPy</a> for deriving analytical expressions which can be easily extended to any operator.</p>
 <p>First, we will derive the fermionic algebra from first quantization and study their properties. 
 $$\newcommand{\ket}[1]{\left|{#1}\right\rangle}
 \newcommand{\bra}[1]{\left\langle{#1}\right|}
@@ -44,7 +44,7 @@ $$\newcommand{\ket}[1]{\left|{#1}\right\rangle}
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Second-Quantization">Second Quantization<a class="anchor-link" href="#Second-Quantization">&#182;</a></h3><p>In this section we will derive the fermionic algebra in second quantization representation from first quantization. Once the fermionic algebra is established, we will derive the relation between the its elements</p>
+<h2 id="Second-Quantization">Second Quantization<a class="anchor-link" href="#Second-Quantization">&#182;</a></h2><p>In this section we will derive the fermionic algebra in second quantization representation from first quantization. Once the fermionic algebra is established, we will derive the relation between the its elements</p>
 $$ \ket{k} = {a^{+}_{k}}\ket{vac} $$<p>The opertor \(a^{+}_{k}\) has created an electron on the vaccum state.</p> 
 $$\phi_{k}(1) \longleftrightarrow {a^{+}_{k}}\ket{vac} $$
 
@@ -115,7 +115,7 @@ anhilation operator for the same orbital. From now on for creation operator we w
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Particle-number-operator">Particle number operator<a class="anchor-link" href="#Particle-number-operator">&#182;</a></h3><p>
+<h2 id="Particle-number-operator">Particle number operator<a class="anchor-link" href="#Particle-number-operator">&#182;</a></h2><p>
 We succesfully showed the transformation of basis from first quantization to second quantization by creating fermionic algebra. Now we will do the same for operators. Lets look at number operator for \(N\) fermions in \(N\) orthogonal basis. The wavefuntion can be written as</p> 
 $$\ket{\Psi_{N}} =  a^{\dagger}_{N}a^{\dagger}_{N-1} ... a^{\dagger}_{2} a^{\dagger}_{1}\ket{vac}$$
 <p>Define number operator for \(k\)th orbital</p>
@@ -130,7 +130,7 @@ $$a^{\dagger}_{k}a_{k} \ket{\Psi_{N}} = a^{\dagger}_{N}a^{\dagger}_{N-1} ...a^{\
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Parity-of-permutation">Parity of permutation<a class="anchor-link" href="#Parity-of-permutation">&#182;</a></h3>$$p q r s \xrightarrow[]{(12)(34)} q p s r$$<p></p>
+<h2 id="Parity-of-permutation">Parity of permutation<a class="anchor-link" href="#Parity-of-permutation">&#182;</a></h2>$$p q r s \xrightarrow[]{(12)(34)} q p s r$$<p></p>
 <p>The total number of transposition required to decompose any permutation $P$ is known as its parity, $\mathcal{p}$</p>
 <p>If the total number is even then its called even parity</p>
 <p>If the total number is odd then its called odd parity</p>
@@ -143,7 +143,7 @@ $$sgn(P_{odd}) =  -1 \hspace{2cm} sgn(P_{even}) =  1$$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Normal-product">Normal product<a class="anchor-link" href="#Normal-product">&#182;</a></h3><p>Given the product of operators, the normal product is defined as rearrangment of operators such that all the creation operator are moved to left and all the anhilation operator to right, then multiply it by sign of permutation.</p>
+<h2 id="Normal-product">Normal product<a class="anchor-link" href="#Normal-product">&#182;</a></h2><p>Given the product of operators, the normal product is defined as rearrangment of operators such that all the creation operator are moved to left and all the anhilation operator to right, then multiply it by sign of permutation.</p>
 <p>Example: Consiper $Q = a_{p}^{\dagger}a_{q}a_{r}^{\dagger}$</p>
 <p>Now, the in order to write normal product of $Q$, one has to permute $a_{q}a_{r}^{\dagger}$ and multiply thw whole by -1 ( $\because$ odd parity permutation).</p>
 $$n[a_{p}^{\dagger}a_{q}a_{r}^{\dagger}] = -a_{p}^{\dagger}a_{r}^{\dagger}a_{q} $$<p>Excercise: $Q =  a_{s}a_{p}^{\dagger}a_{r}a_{q}^{\dagger}$</p>
@@ -238,7 +238,7 @@ $\displaystyle \left\{a^\dagger_{p} a^\dagger_{q} a_{r} a_{s}\right\}$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Contraction">Contraction<a class="anchor-link" href="#Contraction">&#182;</a></h3><p>Contraction between two operators is defined as itself minus its normal product. Symbolically</p>
+<h2 id="Contraction">Contraction<a class="anchor-link" href="#Contraction">&#182;</a></h2><p>Contraction between two operators is defined as itself minus its normal product. Symbolically</p>
 <p><img src="figures/con1.jpg" width=30% height: auto>;</p>
 <p>Example: Compute contraction of $Q = a_{p}a_{q}$</p>
 <p><img src="figures/ex_con1.jpg"  width=30% height: auto>;</p>
@@ -346,7 +346,7 @@ $\displaystyle \delta_{p q}$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Normal-products-with-Contractions">Normal products with Contractions<a class="anchor-link" href="#Normal-products-with-Contractions">&#182;</a></h3><p>Given normal product of operators with contraction of operators inside the normal product.</p>
+<h2 id="Normal-products-with-Contractions">Normal products with Contractions<a class="anchor-link" href="#Normal-products-with-Contractions">&#182;</a></h2><p>Given normal product of operators with contraction of operators inside the normal product.</p>
 <p>Then take all the contractions out in pairs and same order, leave uncontracted operators inside normal product and multiply sign of permutation.</p>
 <p>Example: 
 <img src="figures/NPC_ex1.jpg" width=70% height: auto></p>
@@ -366,7 +366,7 @@ $\displaystyle \delta_{p q}$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Wicks-Theorem">Wicks Theorem<a class="anchor-link" href="#Wicks-Theorem">&#182;</a></h3><p>Given a product of operators then it can be rewritten as normal product of the same plus normal product with all possible contractions inside.</p>
+<h2 id="Wicks-Theorem">Wicks Theorem<a class="anchor-link" href="#Wicks-Theorem">&#182;</a></h2><p>Given a product of operators then it can be rewritten as normal product of the same plus normal product with all possible contractions inside.</p>
 
 </div>
 </div>
@@ -458,7 +458,7 @@ $\displaystyle \delta_{p r} \delta_{q t} \delta_{s u} - \delta_{p r} \delta_{q t
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Expectation-value-with-$\ket{vac}$">Expectation value with \(\ket{vac}\)<a class="anchor-link" href="#Expectation-value-with-$\ket{vac}$">&#182;</a></h3><p>Let $Q = M_{1}M_{2}M_{3} ... M_{n-1}M_{n}$ product of $n$ operators</p>
+<h2 id="Expectation-value-with-$\ket{vac}$">Expectation value with \(\ket{vac}\)<a class="anchor-link" href="#Expectation-value-with-$\ket{vac}$">&#182;</a></h2><p>Let $Q = M_{1}M_{2}M_{3} ... M_{n-1}M_{n}$ product of $n$ operators</p>
 <p><img src="figures/prop_wick1.jpg" width=70% height: auto></p>
 <p>From this one can easily see the importance of Wick's theorem. Lets do some checks using SymPy</p>
 
@@ -558,7 +558,7 @@ $\displaystyle \delta_{p r} \delta_{q t} \delta_{s u} - \delta_{p r} \delta_{q u
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Particle-Hole-formalism">Particle Hole formalism<a class="anchor-link" href="#Particle-Hole-formalism">&#182;</a></h3><p>This procedure makes the evaluation of certain matrix elements easier like</p>
+<h2 id="Particle-Hole-formalism">Particle Hole formalism<a class="anchor-link" href="#Particle-Hole-formalism">&#182;</a></h2><p>This procedure makes the evaluation of certain matrix elements easier like</p>
 $$\bra{\Phi_{0}}\hat{H}\ket{\Phi_{0}}$$$$\bra{\Phi_{i}^{a}}\hat{H}\ket{\Phi_{0}}$$$$\bra{\Phi_{ij}^{ab}}\hat{H}\ket{\Phi_{0}}$$<p>where, $\Phi_{0}$ is Hartree-Fock determinant. Given a Hartree-Fock solution we get occupied and virtual orbitals. Lets assign symbols $(i,j,k,...)$ to occupied and $(a,b,c,...)$ to virtual.</p>
 
 </div>
@@ -595,7 +595,7 @@ $$ \{ b_{p},b_{q} \} = 0 \hspace{1cm} \{ b_{p}^{\dagger},b_{q}^{\dagger} \} = 0 
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Normal-product-of-PHF">Normal product of PHF<a class="anchor-link" href="#Normal-product-of-PHF">&#182;</a></h3><p>It is defined similarly, as rearrangment of operators ($b_{p}$ \&amp; $b_{q}^{\dagger}$) such that all the creation operator are moved to left and all the anhilation operator to right, then multiply it by sign of permutation.</p>
+<h2 id="Normal-product-of-PHF">Normal product of PHF<a class="anchor-link" href="#Normal-product-of-PHF">&#182;</a></h2><p>It is defined similarly, as rearrangment of operators ($b_{p}$ \&amp; $b_{q}^{\dagger}$) such that all the creation operator are moved to left and all the anhilation operator to right, then multiply it by sign of permutation.</p>
 <p>Example: Consiper $R = b_{p}^{\dagger}b_{q}b_{r}^{\dagger}$</p>
 <p>Now, the in order to write normal product of $R$, one has to permute $b_{q}b_{r}^{\dagger}$ and multiply thw whole by -1 ( $\because$ odd parity permutation).</p>
 $$N[b_{p}^{\dagger}b_{q}b_{r}^{\dagger}] = -b_{p}^{\dagger}b_{r}^{\dagger}b_{q} $$<p>The thing one has to focus is this definition shows different result that $n[ ]$.
@@ -659,7 +659,7 @@ $\displaystyle - \left\{a^\dagger_{a} a_{j} a^\dagger_{i}\right\}$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Contractions-in-PHF">Contractions in PHF<a class="anchor-link" href="#Contractions-in-PHF">&#182;</a></h3><p>Same way they are defined but the operators are from PHF</p>
+<h2 id="Contractions-in-PHF">Contractions in PHF<a class="anchor-link" href="#Contractions-in-PHF">&#182;</a></h2><p>Same way they are defined but the operators are from PHF</p>
 <p><img src="figures/con_phf.jpg" width=30% height: auto></p>
 <p>Similarlry the contraction inside normal product, Wicks theorem are defined.</p>
 
@@ -669,7 +669,7 @@ $\displaystyle - \left\{a^\dagger_{a} a_{j} a^\dagger_{i}\right\}$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Expectation-value-with-$\ket{\Phi_{0}}$">Expectation value with $\ket{\Phi_{0}}$<a class="anchor-link" href="#Expectation-value-with-$\ket{\Phi_{0}}$">&#182;</a></h3><p>Let $R = M_{1}M_{2}M_{3} ... M_{n-1}M_{n}$ product of $n$ operators</p>
+<h2 id="Expectation-value-with-$\ket{\Phi_{0}}$">Expectation value with $\ket{\Phi_{0}}$<a class="anchor-link" href="#Expectation-value-with-$\ket{\Phi_{0}}$">&#182;</a></h2><p>Let $R = M_{1}M_{2}M_{3} ... M_{n-1}M_{n}$ product of $n$ operators</p>
 <p><img src="figures/phf_prop_wick1.jpg" width=70% height: auto></p>
 <p>From this one can easily see the importance of Wick's theorem. Lets do some checks using SymPy and derive Hartree-Fock energy</p>
 
@@ -679,7 +679,7 @@ $\displaystyle - \left\{a^\dagger_{a} a_{j} a^\dagger_{i}\right\}$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Electronic-Hamiltonian">Electronic Hamiltonian<a class="anchor-link" href="#Electronic-Hamiltonian">&#182;</a></h3>$$H_{el} = \sum_{pq} h_{pq} a_{p}^{\dagger} a_{q} + \frac{1}{4}\sum_{pqrs} v^{pq}_{rs} a_{p}^{\dagger}a_{q}^{\dagger}a_{s}a_{r}$$<p>where,</p>
+<h2 id="Electronic-Hamiltonian">Electronic Hamiltonian<a class="anchor-link" href="#Electronic-Hamiltonian">&#182;</a></h2>$$H_{el} = \sum_{pq} h_{pq} a_{p}^{\dagger} a_{q} + \frac{1}{4}\sum_{pqrs} v^{pq}_{rs} a_{p}^{\dagger}a_{q}^{\dagger}a_{s}a_{r}$$<p>where,</p>
 $$h_{pq} = \bra{\phi_{p} (x)}(-\frac{1}{2}\nabla^{2} -\sum_{\alpha} \frac{Z_{\alpha}}{r_{\alpha x}} )\ket{\phi_{q} (x)}$$$$v_{pqrs} = \bra{\phi_{p} \phi_{q}}\ket{\phi_{r} \phi_{s}} = \braket{\phi_{p} \phi_{q}}{\phi_{r}\phi_{s}} - \braket{\phi_{p} \phi_{q}}{\phi_{s}\phi_{r}}$$<p>Lets find Hartree-Fock energy</p>
 
 </div>
@@ -768,7 +768,7 @@ $\displaystyle h^{i}_{i} + \frac{v^{ij}_{ij}}{2}$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Normal-ordered-Hamiltonian">Normal ordered Hamiltonian<a class="anchor-link" href="#Normal-ordered-Hamiltonian">&#182;</a></h3>$$H_{N} = \sum_{pq} h_{pq} N[a_{p}^{\dagger} a_{q}] + \frac{1}{4}\sum_{pqrs} v^{pq}_{rs} N[a_{p}^{\dagger}a_{q}^{\dagger}a_{s}a_{r}]$$<p>One can show that</p>
+<h2 id="Normal-ordered-Hamiltonian">Normal ordered Hamiltonian<a class="anchor-link" href="#Normal-ordered-Hamiltonian">&#182;</a></h2>$$H_{N} = \sum_{pq} h_{pq} N[a_{p}^{\dagger} a_{q}] + \frac{1}{4}\sum_{pqrs} v^{pq}_{rs} N[a_{p}^{\dagger}a_{q}^{\dagger}a_{s}a_{r}]$$<p>One can show that</p>
 $$H_{el} = H_{N} + E_{HF}$$<p>From now on we will use $H_{N}$ or computing matrix elements, also $H_{N}$ measures the correlation effect</p>
 
 </div>
@@ -777,7 +777,7 @@ $$H_{el} = H_{N} + E_{HF}$$<p>From now on we will use $H_{N}$ or computing matri
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Baker-Campbell-Hauersdorf">Baker-Campbell-Hauersdorf<a class="anchor-link" href="#Baker-Campbell-Hauersdorf">&#182;</a></h3>$$e^{-B} A  e^{B} = A + [A,B] + \frac{1}{2!}[[A,B],B] + \frac{1}{3!}[[[A,B],B],B] +  ... $$<p>if $A$ is electronic Hamiltonian or normal ordered Hamiltonian and $B$ any excitation operator, then due to the stucture of Hamiltonian the series truncate after fourth expansion. This is the reason we call coupled cluster as coupled cluster.</p>
+<h2 id="Baker-Campbell-Hauersdorf">Baker-Campbell-Hauersdorf<a class="anchor-link" href="#Baker-Campbell-Hauersdorf">&#182;</a></h2>$$e^{-B} A  e^{B} = A + [A,B] + \frac{1}{2!}[[A,B],B] + \frac{1}{3!}[[[A,B],B],B] +  ... $$<p>if $A$ is electronic Hamiltonian or normal ordered Hamiltonian and $B$ any excitation operator, then due to the stucture of Hamiltonian the series truncate after fourth expansion. This is the reason we call coupled cluster as coupled cluster.</p>
 
 </div>
 </div>
@@ -785,7 +785,7 @@ $$H_{el} = H_{N} + E_{HF}$$<p>From now on we will use $H_{N}$ or computing matri
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Coupled-Cluster-Singles-and-Doubles-(CCSD)">Coupled Cluster Singles and Doubles (CCSD)<a class="anchor-link" href="#Coupled-Cluster-Singles-and-Doubles-(CCSD)">&#182;</a></h3>$$\Psi_{CCSD} = e^{T} \ket{\Phi_{0}}$$<p>where, 
+<h2 id="Coupled-Cluster-Singles-and-Doubles-(CCSD)">Coupled Cluster Singles and Doubles (CCSD)<a class="anchor-link" href="#Coupled-Cluster-Singles-and-Doubles-(CCSD)">&#182;</a></h2>$$\Psi_{CCSD} = e^{T} \ket{\Phi_{0}}$$<p>where, 
 $$ T_{1} = \sum_{ia}t_{i}^{a}a^{\dagger}i$$</p>
 $$ T_{2} = \frac{1}{4}\sum_{ijab}t_{ij}^{ab}a^{\dagger}b^{\dagger}ji$$<p>Equations which need to be solved
 $$ E_{CCSD}^{cor} = \bra{\Phi_{0}}e^{-T} H_{N} e^{T} \ket{\Phi_{0}}   \tag{Correltion energy}$$</p>
@@ -930,7 +930,7 @@ $\displaystyle f^{k}_{c} t^{c}_{i} t^{ab}_{jk} P(ij) + f^{k}_{c} t^{a}_{k} t^{bc
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Equation-of-motion-Coupled-Cluster">Equation-of-motion Coupled-Cluster<a class="anchor-link" href="#Equation-of-motion-Coupled-Cluster">&#182;</a></h3><p>EOM-CC allows to compute excited and open-shell character electronic states. There are many flavor depending on the target state from reference.</p>
+<h2 id="Equation-of-motion-Coupled-Cluster">Equation-of-motion Coupled-Cluster<a class="anchor-link" href="#Equation-of-motion-Coupled-Cluster">&#182;</a></h2><p>EOM-CC allows to compute excited and open-shell character electronic states. There are many flavor depending on the target state from reference.</p>
 <h4 id="Energy-and-amplitude-equations-of-EOM-CC">Energy and amplitude equations of EOM-CC<a class="anchor-link" href="#Energy-and-amplitude-equations-of-EOM-CC">&#182;</a></h4>$$\bar{H} = e^{-T} H_{N} e^{T}$$$$\bra{\Phi_{ij..}^{ab..}}\bar{H}\hat{R}\ket{\Phi_{0}} = E_{EOM} \bra{\Phi_{ij..}^{ab..}}\hat{R}\ket{\Phi_{0}}$$$$\bra{\Phi_{ij..}^{ab..}}[\bar{H}-E_{cc},\hat{R}]\ket{\Phi_{0}} = \Delta E_{EOM} \bra{\Phi_{ij..}^{ab..}}\hat{R}\ket{\Phi_{0}}$$<p>Last equation is the one which we will derive using SymPy</p>
 
 </div>
@@ -1076,7 +1076,7 @@ $\displaystyle ((\overline{H}_{DD}-E_{cc})R_{2}) = - f^{k}_{b} r^{b}_{ij} t^{a}_
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Properties">Properties<a class="anchor-link" href="#Properties">&#182;</a></h3><h4 id="One-particle-density-matrix-(OPDM)">One particle density matrix (OPDM)<a class="anchor-link" href="#One-particle-density-matrix-(OPDM)">&#182;</a></h4>$$\gamma^I_{pq}= \bra{\Psi_{I}}p^{\dagger}q\ket{\Psi_{I}}$$<h4 id="One-particle-transition-density-matrix-(OPTDM)">One particle transition density matrix (OPTDM)<a class="anchor-link" href="#One-particle-transition-density-matrix-(OPTDM)">&#182;</a></h4>$$\gamma^{IJ}_{pq}= \bra{\Psi_{I}}p^{\dagger}q\ket{\Psi_{J}}$$
+<h2 id="Properties">Properties<a class="anchor-link" href="#Properties">&#182;</a></h2><h4 id="One-particle-density-matrix-(OPDM)">One particle density matrix (OPDM)<a class="anchor-link" href="#One-particle-density-matrix-(OPDM)">&#182;</a></h4>$$\gamma^I_{pq}= \bra{\Psi_{I}}p^{\dagger}q\ket{\Psi_{I}}$$<h4 id="One-particle-transition-density-matrix-(OPTDM)">One particle transition density matrix (OPTDM)<a class="anchor-link" href="#One-particle-transition-density-matrix-(OPTDM)">&#182;</a></h4>$$\gamma^{IJ}_{pq}= \bra{\Psi_{I}}p^{\dagger}q\ket{\Psi_{J}}$$
 </div>
 </div>
 </div>
